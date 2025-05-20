@@ -52,8 +52,9 @@ def generate_plot(path_name,column_choice):
     plots = 'dist_plots/'
     if not os.path.exists(plots):
         os.makedirs(plots)
-    if column_choice == "area":         
+    if column_choice == "area distribution":         
         sd,area=check_size(data)
+        print("here")
         #value = [sd[key]['mean'] for key in sd.keys()]
         categories = area.keys() 
         value = [area[key] for key in categories]
