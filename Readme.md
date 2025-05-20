@@ -29,7 +29,7 @@ python tabbed_gradio.py
 Step 4: Navigate as per the fields and please keep in mind the following
     1. The absolute path of the json files should not be given. Expected arguments are like bdd100k_labels_release\bdd100k\labels\bdd100k_labels_images_train.json
     2. While choosing the sample level tabs please ensure the class names are in lower caps as mentiond in the jsons
-If not followed the dashbord might throuw unhandled exception which were considered out of scope
+If not followed the dashbord might through unhandled exception which were considered out of scope
 
 Alternatively you can create a virtual environment and do the following steps:
 
