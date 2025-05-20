@@ -47,7 +47,7 @@ python tabbed_gradio.py
 
 The considereations mentioned before on inputs apply here as well. 
 A sample output for training class distribution and unique sample 
-![alt text](image.png)
+![alt text](image-3.png)
  ![alt text](image-2.png)
  Observations:
 
