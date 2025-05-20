@@ -116,7 +116,7 @@ python prep_GT.py
 ```
 
 step 2: Generate the predictions
-Please use the weight yolox_s.pth, and yolox_s.py [here]https://drive.google.com/drive/folders/1u_xxsu1K-kI66Nsy7Om7tiQp7qwlfWhj?usp=sharing for reproducing the results. You can use best_ckpt.pth with bdd.py as experiment file but it would produce severly incorrect boxes
+Please use the weight yolox_s.pth, and yolox_s.py [here](https://drive.google.com/drive/folders/1u_xxsu1K-kI66Nsy7Om7tiQp7qwlfWhj?usp=sharing) for reproducing the results. You can use best_ckpt.pth with bdd.py as experiment file but it would produce severly incorrect boxes
 
 ```shell
 python tools/demo.py image -f {your experiment.py file} -c /path/to/your/yolox_s.pth --path {Your folder} --conf 0.25 --nms 0.45 --tsize 640
