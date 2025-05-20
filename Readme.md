@@ -7,7 +7,7 @@ The repository contains source codes to do the following
 
 ## Data analysis Dashboard
 
-It is better if you execute through the docker image. The docker image is available here
+It is better if you execute through the docker image. The docker image is available [here]
 
 Step 1: Download the docker the docker image and load 
 ```shell
@@ -18,7 +18,7 @@ docker image load -i soum_bdd.tar
 Step 2: Create a docker container from the image using  
 
 ```shell
-docker run -itd -v ${PWD}:/mnt --name your_preferred_name -p 7680:7680 image_name:tag bash
+docker run -itd -v ${PWD}:/app --name your_preferred_name -p 7680:7680 image_name:tag bash
 ```
 your present working directory should also contain the folders bdd100k_images_100k, bdd100k_labels_release
 
@@ -37,11 +37,18 @@ Step 1:
 ```shell
 python -m venv {your preferred name}
 source activate {your preferred name}/Scrips/activate or source activate {your preferred name}/bin/activate
-pip install requirements.txt
+pip install -r requirements.txt
+```
+if you face error in pep517 consider setting --no-use-pep517 in pip install or upgrade pip version
+
+```shell
 python tabbed_gradio.py
 ```
-The considereations mentioned before on inputs apply here as well
- 
+
+The considereations mentioned before on inputs apply here as well. 
+A sample output for training class distribution and unique sample 
+![alt text](image.png)
+ ![alt text](image-1.png)
  Observations:
 
  1. The data distributions were highly skwewed with over represented and under represented image samples
@@ -71,6 +78,9 @@ The reasons for choosing YoloX are as follows
 Steps for YoloX training
 
 1. The steps of installation are mentioned in https://github.com/Megvii-BaseDetection/YOLOX
+```shell 
+cd YOLOX
+
 2. To run the training the data should be converted to coco format, both train and val
 ```shell
 python convert_coco.py
@@ -102,7 +112,7 @@ python prep_GT.py
 ```
 
 step 2: Generate the predictions
-Please use the weight yolox_s.pth, and yolox_s.py for reproducing the results. You can use best_ckpt.pth with bdd.py as experiment file but it would produce severly incorrect boxes
+Please use the weight yolox_s.pth, and yolox_s.py [here]https://drive.google.com/drive/folders/1u_xxsu1K-kI66Nsy7Om7tiQp7qwlfWhj?usp=sharing for reproducing the results. You can use best_ckpt.pth with bdd.py as experiment file but it would produce severly incorrect boxes
 
 ```shell
 python tools/demo.py image -f {your experiment.py file} -c /path/to/your/yolox_s.pth --path {Your folder} --conf 0.25 --nms 0.45 --tsize 640

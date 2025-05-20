@@ -73,7 +73,7 @@ def generate_image(name,path_name,column_choice):
         Output: bbix impainted image'''
     data = load_json(path_name)
     class_unique = class_stats(data)
-    root = '/app/bdd100k_images_100k/bdd100k/images/100k/'
+    root = 'bdd100k_images_100k/bdd100k/images/100k/'
     cat = path_name.split('/')[-1].split('_')[-1].split('.')[0]
     print("category",cat)
     img = cv2.imread(root+cat+'/'+class_unique[name][column_choice])
@@ -114,4 +114,4 @@ iface2 = gr.Interface(
 tabbed = gr.TabbedInterface([iface1, iface2], ["class level", "Sample level"])
 
 # Launch the tabbed interface on local host
-tabbed.launch(server_name="0.0.0.0")
+tabbed.launch()

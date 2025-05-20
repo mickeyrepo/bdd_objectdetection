@@ -126,7 +126,9 @@ def compute_map(detections, annotations, iou_threshold=0.5):
 
 # Calculate mAP
 # Example usage
+# Path to the prediction files
 preds_path = 'YOLOX_outputs/yolox_s/vis_res/2025_05_20_19_30_36/'
+# path to the GT files
 gt_path = 'groundtruth/'
 map = []
 for i,idx in enumerate([1,2,5,6,7]):
