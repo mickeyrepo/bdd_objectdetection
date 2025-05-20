@@ -1,0 +1,6 @@
+opencv-python
+gradio
+imagehash
+matplotlib
+pandas
+scikit-learn
