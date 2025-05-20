@@ -77,9 +77,13 @@ The reasons for choosing YoloX are as follows
 
 Steps for YoloX training
 
+The docker image has not got Yolox installed as it would un-necessarily make the image size large.  
+
 1. The steps of installation are mentioned in https://github.com/Megvii-BaseDetection/YOLOX
 ```shell 
 cd YOLOX
+pip3 install -v -e .
+```
 
 2. To run the training the data should be converted to coco format, both train and val
 ```shell
