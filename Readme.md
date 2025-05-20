@@ -7,7 +7,7 @@ The repository contains source codes to do the following
 
 ## Data analysis Dashboard
 
-It is better if you execute through the docker image. The docker image is available [here]
+It is better if you execute through the docker image. The docker image is available [here](https://drive.google.com/drive/folders/17jUG1RX6fBoy6I6XsxMq4jO_XQFLZSSB?usp=drive_link)
 
 Step 1: Download the docker the docker image and load 
 ```shell
